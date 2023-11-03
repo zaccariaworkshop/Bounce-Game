@@ -2,7 +2,7 @@ from tkinter import *
 
 root = Tk()
 # Title of the game
-root.title("Bounce")
+root.title("Brick-Breaker in Red Hat")
 root.geometry("500x670")
 root.resizable(0, 0)
 root.wm_attributes("-topmost", 1)
