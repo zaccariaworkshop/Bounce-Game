@@ -23,13 +23,30 @@ def start_game(event):
         file1.close()
         score.configure(text="Score: 00\n\nHighscore: " + highscore)
         canvas.delete("all")
-        BALL_COLOR = ["red", "yellow", "green"]
-        BRICK_COLOR = ["PeachPuff3", "dark slate gray", "rosy brown", "light goldenrod yellow", "turquoise3", "salmon",
-                       "light steel blue", "dark khaki", "pale violet red", "orchid", "tan", "MistyRose2",
-                       "DodgerBlue4", "wheat2", "RosyBrown2", "bisque3", "DarkSeaGreen1"]
+        BALL_COLOR = ["red"]
+        # Search on google for hex colour picker:
+        BRICK_COLOR = [
+        "#FF6F61",  # A warm red
+        "#6B5B95",  # A muted purple
+        "#88B04B",  # A fresh green
+        "#F7CAC9",  # A soft pink
+        "#92A8D1",  # A calm blue
+        "#955251",  # A deep wine red
+        "#B565A7",  # A medium pink-purple
+        "#009B77",  # A medium teal
+        "#DD4124",  # A vibrant red-orange
+        "#D65076",  # A bright pink
+        "#45B8AC",  # A light sea green
+        "#EFC050",  # A golden yellow
+        "#5B5EA6",  # A royal blue
+        "#9B2335",  # A strong red
+        "#DFCFBE",  # A neutral beige
+        "#55B4B0",  # An aqua blue
+        "#E15D44"   # A bright orange-red
+        ]
         random.shuffle(BALL_COLOR)
         # Colour of the paddle
-        paddle = Paddle(canvas, "blue")
+        paddle = Paddle(canvas, "#4d55f7")
         bricks = []
         for i in range(0, 5):
             b = []
