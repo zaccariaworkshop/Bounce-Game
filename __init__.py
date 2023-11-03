@@ -1,4 +1,9 @@
 from tkinter import *
+import pygame # install with "pip install pygame"
+
+pygame.mixer.init()
+pygame.mixer.music.load('themesong.mp3') # song downloaded from https://www.chosic.com/free-music/games/ 
+pygame.mixer.music.play()
 
 root = Tk()
 # Title of the game

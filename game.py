@@ -98,6 +98,7 @@ def start_game(event):
                         file1.write(str(ball.hit))
                         file1.close()
                     canvas.create_text(250, 250, text="GAME OVER!!\nYour score was: " + str(ball.hit), fill="red", font="Consolas 24 ")
+                    pygame.mixer.music.stop()
                     root.update_idletasks()
                     root.update()
                     playing = False
