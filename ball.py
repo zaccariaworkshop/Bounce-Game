@@ -32,7 +32,7 @@ class Ball:
                         if pos[3] >= brick_pos[1] and pos[1] <= brick_pos[3]:
                             canvas.bell()
                             # Points gained per brick hit.
-                            self.hit += 1
+                            self.hit += 25
                             file1 = open("highscore.txt","r+")
                             highscore = str(file1.read())
                             file1.close()
