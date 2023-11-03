@@ -18,6 +18,7 @@ def start_game(event):
     global playing
     if playing is False:
         playing = True
+        pygame.mixer.music.play()
         file1 = open("highscore.txt","r+")
         highscore = str(file1.read())
         file1.close()
