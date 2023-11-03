@@ -67,6 +67,9 @@ def start_game(event):
                         root.update_idletasks()
                         root.update()
                         playing = False
+                        # Bind keys for when player wins
+                        root.bind_all("<Right>", start_game)
+                        root.bind_all("<Left>", start_game)
                         break
                 else:
                     # Game Over message and colour
@@ -81,6 +84,9 @@ def start_game(event):
                     root.update_idletasks()
                     root.update()
                     playing = False
+                    # Bind keys for when game is over
+                    root.bind_all("<Right>", start_game)
+                    root.bind_all("<Left>", start_game)
                     break
             else:
                 try:
@@ -93,6 +99,8 @@ def start_game(event):
 
 # Initial text in screen (x,y), and Start Button
 root.bind_all("<Return>", start_game)
+root.bind_all("<Right>", start_game)
+root.bind_all("<Left>", start_game)
 canvas.create_text(250, 250, text="Press Enter to start Game!!", fill="red", font="Consolas 18")
 root.mainloop()
         
